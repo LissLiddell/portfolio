@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Sora:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* TODOS tus estilos personalizados van aquí */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  
+  body {
+    @apply bg-dark-1 text-white font-inter;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sora;
+  }
+}
+
+@layer components {
+  .bg-aurora {
+    background: linear-gradient(135deg, theme('colors.indigo.900'), theme('colors.violet.600'));
+  }
+  
+  .bg-hero {
+    background: radial-gradient(circle at 70% 30%, theme('colors.fuchsia.500') 0%, theme('colors.violet.700') 50%, theme('colors.violet.300') 100%);
+  }
+  
+  /* ... todos los demás estilos que te pasé ... */
+}
