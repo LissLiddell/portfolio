@@ -12,7 +12,7 @@ export default function Hero() {
         <div className="max-w-3xl">
           <p className="text-violet-300 font-medium mb-4">Guadalajara, MX — UTC-6</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-sora mb-6 leading-tight">
-            Creo experiencias web <span className="text-fuchsia-500">moradas</span>,{' '}
+            Creo experiencias  <span className="text-fuchsia-500">web</span>,{' '}
             <span className="text-violet-300">rápidas</span> y con{' '}
             <span className="text-violet-600">carácter</span>.
           </h1>

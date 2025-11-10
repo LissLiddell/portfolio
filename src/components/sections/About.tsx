@@ -35,7 +35,12 @@ export default function About() {
           {/* Bio Text */}
           <div className="md:col-span-2">
             <p className="text-lg text-gray-300 mb-8">
-              Desarrollador apasionado por crear experiencias web modernas y eficientes. Me especializo en el ecosistema Vue y las últimas tecnologías Frontend, siempre buscando el balance perfecto entre diseño atractivo y funcionalidad impecable. Mi objetivo es construir aplicaciones que no solo se vean bien, sino que también ofrezcan excelente rendimiento y accesibilidad.
+              Versatile professional with comprehensive experience across the software development lifecycle—from 
+              requirement analysis and design to implementation and optimization. Strong technical background in cloud 
+              environments (AWS), languages such as Python, JavaScript/TypeScript, and C#, and modern frameworks like Vue3 
+              and React. Deep understanding of business processes in areas like Collections, Credit, and Sales, gained through 
+              previous roles as an Analyst and Key User. Seeking to contribute to challenging projects where I can apply my 
+              technical and analytical skills to drive impact.
             </p>
             
             {/* KPIs */}
@@ -46,7 +51,7 @@ export default function About() {
                 transition={{ duration: 0.5 }}
                 className="p-6 bg-dark-3 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105"
               >
-                <Counter value={5} className="text-4xl font-bold text-fuchsia-500" />
+                <Counter value={1.6} className="text-4xl font-bold text-fuchsia-500" />
                 <p className="text-gray-400 mt-2">Años de experiencia</p>
               </motion.div>
               
@@ -56,7 +61,7 @@ export default function About() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="p-6 bg-dark-3 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105"
               >
-                <Counter value={35} className="text-4xl font-bold text-violet-600" />
+                <Counter value={10} className="text-4xl font-bold text-violet-600" />
                 <p className="text-gray-400 mt-2">Proyectos completados</p>
               </motion.div>
               

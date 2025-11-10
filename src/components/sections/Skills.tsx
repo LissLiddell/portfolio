@@ -2,9 +2,34 @@
 
 export default function Skills() {
   const skills = [
-    { name: "Vue.js / Nuxt.js", percentage: 95 },
-    { name: "TypeScript", percentage: 90 },
-    { name: "Tailwind CSS", percentage: 98 }
+    { name: "Vue.js / Next.js", percentage: 80 },
+    { name: "React", percentage: 80 },
+    { name: "PrimeVue", percentage: 80 },
+    { name: "Entity Framework", percentage: 80 },
+    { name: "LuigiClient", percentage: 80 },
+    { name: "Python", percentage: 80 },
+    { name: "TypeScript", percentage: 80 },
+    { name: "JavaScript", percentage: 80 },
+    { name: "C#", percentage: 50 },
+    { name: "PHP", percentage: 50 },
+    { name: "HTML5", percentage: 50 },
+    { name: "Tailwind CSS", percentage: 80 },
+    { name: "PrimeFlex", percentage: 80 },
+    { name: "AWS (APIs, Luigi),", percentage: 80 },
+    { name: "Docker", percentage: 80 },
+    { name: "MySQL", percentage: 80 },
+    { name: "SAP HANA Cloud", percentage: 30 },
+    { name: "Intelisis", percentage: 80 },
+    { name: "SAP BAPI/CPI", percentage: 80 },
+    { name: "JWT Authentication", percentage: 80 },
+    { name: "Scrum", percentage: 80 },
+    { name: "Requirements Analysis", percentage: 80 },
+    { name: "Technical/Functional Documentation", percentage: 80 },
+    { name: "Collections", percentage: 90 },
+    { name: "Credit", percentage: 50 },
+    { name: "HR", percentage: 50 },
+    { name: "Sales", percentage: 70 },
+    { name: "Legal HR Management", percentage: 60 },
   ];
 
   return (

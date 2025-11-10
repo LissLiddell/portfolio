@@ -5,9 +5,7 @@ export default function Projects() {
     {
       title: "Analytics Dashboard Platform",
       image: "https://cdn.pixabay.com/photo/2023/05/21/07/47/ai-generated-8007426_1280.jpg",
-      problem: "Visualización de datos complejos con problemas de rendimiento y UX confusa.",
       solution: "Dashboard con lazy loading, visualizaciones dinámicas y optimización de memoria.",
-      result: "Reducción de 65% en tiempo de carga y aumento de 40% en engagement del usuario.",
       technologies: ["Vue 3", "TypeScript", "D3.js", "AWS"]
     }
   ];
@@ -31,7 +29,7 @@ export default function Projects() {
                 <h3 className="text-xl font-bold font-sora mb-2">{project.title}</h3>
                 <div className="mb-4">
                   <p className="text-sm text-violet-300 font-medium mb-1">Problema:</p>
-                  <p className="text-sm text-gray-300">{project.problem}</p>
+                  <p className="text-sm text-gray-300">{project.solution}</p>
                 </div>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, i) => (
