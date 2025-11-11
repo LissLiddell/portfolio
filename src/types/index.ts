@@ -11,26 +11,32 @@ export interface FormStatus {
   message: string;
 }
 
-export interface ExperienceItem {
-  period: string;
-  title: string;
-  company: string;
-  description: string[];
-}
-
-export interface Project {
-  title: string;
-  image: string;
-  problem: string;
-  solution: string;
-  result: string;
-  technologies: string[];
-  demoLink?: string;
-  repoLink?: string;
+export interface NavItem {
+  href: string;
+  label: string;
 }
 
 export interface Skill {
   name: string;
-  percentage: number;
-  category: 'frontend' | 'backend';
+  level: number;
+  category: 'frontend' | 'backend' | 'tools' | 'soft';
+}
+
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  technologies: string[];
+  image: string;
+  liveUrl?: string;
+  githubUrl?: string;
+}
+
+export interface Experience {
+  id: string;
+  company: string;
+  position: string;
+  period: string;
+  description: string;
+  technologies: string[];
 }

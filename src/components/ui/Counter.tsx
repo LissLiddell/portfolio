@@ -11,8 +11,8 @@ export default function Counter({ value, className = '' }: CounterProps) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    const duration = 2000; // 2 seconds
-    const step = value / (duration / 30); // update every 30ms
+    const duration = 2000;
+    const step = value / (duration / 30);
     
     let current = 0;
     const timer = setInterval(() => {

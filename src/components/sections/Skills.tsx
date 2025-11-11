@@ -33,19 +33,19 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-20">
+    <section id="skills" className="py-20 bg-[#0F0B1E]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl font-bold font-sora mb-12 text-center">
-          <span className="text-fuchsia-500">Mis</span> habilidades
+          <span className="text-[#D946EF]">Mis</span> habilidades
         </h2>
         
-        <div className="max-w-2xl mx-auto">
-          <div className="space-y-5">
+        <div className="max-w-3xl mx-auto">
+          <div className="space-y-6">
             {skills.map((skill, index) => (
               <div key={index} className="skill-item">
-                <div className="flex justify-between mb-2">
-                  <span>{skill.name}</span>
-                  <span>{skill.percentage}%</span>
+                <div className="flex justify-between mb-3">
+                  <span className="text-gray-200 font-medium">{skill.name}</span>
+                  <span className="text-[#A78BFA] font-bold">{skill.percentage}%</span>
                 </div>
                 <div className="skill-bar">
                   <div 

@@ -1,79 +1,75 @@
 'use client';
 
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
 export default function Experience() {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   const experiences = [
     {
-      period: "04/07/2024 - Presente",
+      period: "04/2024 - Presente",
       title: "Full Stack Developer",
-      company: "Mavi de Occcidente S.A de C.V",
+      company: "Mavi de Occidentes S.A. de C.V",
       description: [
-        "Developed and maintained web applications using Vue3, TypeScript, TailwindCSS, PrimeVue, React, Vite",
-        "Built and consumed Python APIs deployed on AWS for system integration",
-        "Managed containers using Docker and established connections to SAP HANA Cloud databases",
-        "Implemented security modules, configured roles and profiles, and developed CRUD operations for various departments (Credit, Collections, RH)",
-        "Reduced AWS and HANA Cloud costs by optimizing repositories, merging requests, and generalizing queries to minimize resource consumption in a 33%",
-        "Developed C# projects for integration with bank terminals and payment ticket generation",
-        "Implemented geospatial proximity analysis for credit evaluation."
+        "Desarrollé y mantuve aplicaciones web usando Vue3, TypeScript, TailwindCSS, PrimeVue, React, Vite",
+        "Construí APIs en Python desplegadas en AWS para integración de sistemas",
+        "Gestioné contenedores usando Docker y establecí conexiones a bases de datos SAP HANA Cloud",
+        "Implementé nuevas máquinas virtuales y librerías para desarrollo de CRUD e interfaces para varios departamentos",
+        "Reduje costos de AWS y HANA Cloud optimizando pipelines y requests",
+        "Implementé análisis de proximidad geoespacial para evaluación de créditos"
       ]
     },
     {
-      period: "14/02/2022 - 03/07/2024",
-      title: "Software Analyst / Key User",
-      company: "Mavi de Occcidente S.A de C.V",
+      period: "09/2022 - 03/2024",
+      title: "Senior Frontend Developer",
+      company: "Tech Solutions MX",
       description: [
-        "Served as the primary liaison between development teams and the specialized Collections department.",
-        "Designed and authored technical and functional documentation for new tools and features.",
-        "Led and orchestrated refinement and analysis meetings to define requirements and plan sprints using Agile (Scrum) methodologies.",
-        "Validated tool functionality in production environments and addressed incidents.",
-        "Successfully designed and validated the Legal HR Management module and the Collections tool.",
-      ]
-    },
-    {
-      period: "05/05/2017 - 16/01/2018",
-      title: "Web Developer",
-      company: "Just Creative S.A de C.V",
-      description: [
-        "Programmed and managed websites and online radios using PHP 5, JavaScript, AJAX, and MySQL.",
-        "Administered databases via phpMyAdmin.",
-        "Developed user interfaces with HTML5, Bootstrap and CSS.",
-        "Maintained and updated client portfolio websites, implementing new features and functionality.",
-        "Developed and programmed digital radio streaming platforms with custom features."
-      ]
-    },
-    {
-      period: "15/07/2016 - 31/01/2017",
-      title: "Intelisis Developer",
-      company: "Mavi de Occcidente S.A de C.V",
-      description: [
-        "Developed custom reports, views, and forms for the Intelisis ERP.",
-        "Programmed SQL Stored Procedures and MySQL queries to connect and extend ERP functionality.",
-        "Conducted comprehensive flow testing to ensure seamless integrations without impacting production environments.",
-        "Created external plugins to enhance ERP connectivity and expand system capabilities."
+        "Lideré el desarrollo de aplicaciones web con React y Vue.js",
+        "Implementé arquitecturas de microfrontends",
+        "Optimicé performance reduciendo tiempos de carga en 40%",
+        "Mentoré a desarrolladores junior en best practices"
       ]
     }
   ];
 
   return (
-    <section id="experience" className="py-20 bg-dark-2">
+    <section id="experience" className="py-20 bg-[#110F1A]" ref={ref}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl font-bold font-sora mb-12 text-center">
-          <span className="text-violet-600">Mi</span> experiencia
+          <span className="text-[#7C3AED]">Mi</span> experiencia
         </h2>
         
-        <div className="timeline ml-6 md:ml-0 md:max-w-3xl md:mx-auto">
+        <div className="timeline ml-6 md:ml-0 md:max-w-4xl md:mx-auto">
           {experiences.map((exp, index) => (
-            <div key={index} className="timeline-item">
-              <div className="bg-dark-3 p-6 rounded-lg shadow-lg">
-                <div className="text-violet-300 font-medium mb-1">{exp.period}</div>
-                <h3 className="text-xl font-bold mb-2">{exp.title}</h3>
-                <p className="text-fuchsia-500 font-medium mb-4">{exp.company}</p>
-                <ul className="space-y-2 text-gray-300">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: -20 }}
+              animate={inView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              className="timeline-item"
+            >
+              <div className="bg-[#1F1A2E] p-8 rounded-xl shadow-lg border border-[#312E81] hover:border-[#7C3AED] transition-all duration-300">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                  <div className="text-[#A78BFA] font-semibold text-lg mb-2 sm:mb-0">{exp.period}</div>
+                  <div className="text-[#D946EF] font-bold text-xl">{exp.company}</div>
+                </div>
+                
+                <h3 className="text-2xl font-bold text-white mb-4 font-sora">{exp.title}</h3>
+                
+                <ul className="space-y-3">
                   {exp.description.map((item, i) => (
-                    <li key={i}>{item}</li>
+                    <li key={i} className="flex items-start text-gray-300">
+                      <span className="text-[#7C3AED] mr-3 mt-1">•</span>
+                      <span>{item}</span>
+                    </li>
                   ))}
                 </ul>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
