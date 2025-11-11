@@ -3,10 +3,28 @@
 export default function Projects() {
   const projects = [
     {
-      title: "Analytics Dashboard Platform",
+      title: "Trading Analysis Tool",
       image: "https://cdn.pixabay.com/photo/2023/05/21/07/47/ai-generated-8007426_1280.jpg",
-      solution: "Dashboard con lazy loading, visualizaciones dinámicas y optimización de memoria.",
-      technologies: ["Vue 3", "TypeScript", "D3.js", "AWS"]
+      solution: "Developed an automated financial analysis tool using Python for market data processing and trend identification,Implemented data visualization for trading decisions and portfolio performance tracking.",
+      technologies: ["Python", "Automated Scheduling", "Automated Scheduling"]
+    },
+    {
+      title: "Point of Sale (POS) System",
+      image: "https://cdn.pixabay.com/photo/2023/05/21/07/47/ai-generated-8007426_1280.jpg",
+      solution: "Developed an automated financial analysis tool using Python for market data processing and trend identification,Implemented data visualization for trading decisions and portfolio performance tracking.",
+      technologies: ["React", "Node.js", "Tailwindcss", "next js"]
+    },
+    {
+      title: "Hotmart Affiliate Management Platform",
+      image: "https://cdn.pixabay.com/photo/2023/05/21/07/47/ai-generated-8007426_1280.jpg",
+      solution: "Developed an automated financial analysis tool using Python for market data processing and trend identification,Implemented data visualization for trading decisions and portfolio performance tracking.",
+      technologies: ["Hotmart"]
+    },
+    {
+      title: "Security Module & Authentication System",
+      image: "https://cdn.pixabay.com/photo/2023/05/21/07/47/ai-generated-8007426_1280.jpg",
+      solution: "Developed an automated financial analysis tool using Python for market data processing and trend identification,Implemented data visualization for trading decisions and portfolio performance tracking.",
+      technologies: ["Hotmart"]
     }
   ];
 
