@@ -1,30 +1,25 @@
 'use client';
 import { useState } from 'react';
-import { NavItem } from '@/types';
+import { useScroll } from '../../hooks/useScroll';
+import { NavItem } from '../../types';
 
-interface NavbarProps {
-  scrolled: boolean;
-}
+const navItems: NavItem[] = [
+  { href: '#about', label: 'Acerca de' },
+  { href: '#experience', label: 'Experiencia' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#projects', label: 'Proyectos' },
+];
 
-export default function Navbar({ scrolled }: NavbarProps) {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
-  const [currentSection, setCurrentSection] = useState<string>('hero');
-
-  const navItems: NavItem[] = [
-    { href: '#about', label: 'Acerca de' },
-    { href: '#experience', label: 'Experiencia' },
-    { href: '#skills', label: 'Skills' },
-    { href: '#projects', label: 'Proyectos' },
-  ];
+export default function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { scrolled, currentSection } = useScroll();
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-opacity-70 bg-[#0F0B1E] backdrop-blur-md shadow-lg' 
-          : 'bg-transparent'
-      }`}
-    >
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      scrolled 
+        ? 'bg-opacity-70 bg-[#0F0B1E] backdrop-blur-md shadow-lg' 
+        : 'bg-transparent'
+    }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <nav className="flex items-center justify-between py-4">
           <a href="#hero" className="text-2xl font-bold text-white font-sora">
@@ -34,9 +29,8 @@ export default function Navbar({ scrolled }: NavbarProps) {
             <span className="text-[#A78BFA]">{'}'}</span>
           </a>
           
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item: NavItem) => (
+            {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
@@ -55,11 +49,9 @@ export default function Navbar({ scrolled }: NavbarProps) {
             </a>
           </div>
           
-          {/* Mobile Menu Button */}
           <button 
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden text-white focus:outline-none"
-            aria-label="Toggle mobile menu"
           >
             {!mobileMenuOpen ? (
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -74,11 +66,10 @@ export default function Navbar({ scrolled }: NavbarProps) {
         </nav>
       </div>
       
-      {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-[#110F1A] bg-opacity-95 backdrop-blur-md absolute w-full">
           <div className="px-4 pt-2 pb-6 space-y-4">
-            {navItems.map((item: NavItem) => (
+            {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}

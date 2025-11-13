@@ -2,9 +2,9 @@ import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -36,6 +36,18 @@ const config: Config = {
       },
       backdropBlur: {
         xs: '2px',
+      },
+      animation: {
+        'morph-blob': 'morphBlob 15s ease-in-out infinite',
+      },
+      keyframes: {
+        morphBlob: {
+          '0%': { borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%' },
+          '25%': { borderRadius: '30% 60% 70% 40% / 50% 60% 30% 60%' },
+          '50%': { borderRadius: '50% 60% 30% 40% / 40% 30% 70% 60%' },
+          '75%': { borderRadius: '40% 60% 70% 30% / 60% 40% 30% 70%' },
+          '100%': { borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%' },
+        }
       }
     },
   },

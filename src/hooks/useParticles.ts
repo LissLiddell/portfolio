@@ -1,20 +1,13 @@
-'use client';
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import { loadSlim } from 'tsparticles-slim';
-import { Engine } from 'tsparticles-engine';
 
-export default function ParticlesBackground() {
-  const particlesInitialized = useRef<boolean>(false);
-
+export const useParticles = () => {
   useEffect(() => {
-    if (particlesInitialized.current) return;
-    
-    // Skip if prefers-reduced-motion is enabled
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       return;
     }
 
-    const initParticles = async (): Promise<void> => {
+    const initParticles = async () => {
       const { tsParticles } = await import('tsparticles-engine');
       await loadSlim(tsParticles);
       
@@ -81,8 +74,5 @@ export default function ParticlesBackground() {
     };
 
     initParticles();
-    particlesInitialized.current = true;
   }, []);
-
-  return <div id="particles-js" className="absolute w-full h-full top-0 left-0 z-1 pointer-events-none" />;
-}
+};

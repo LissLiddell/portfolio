@@ -40,3 +40,11 @@ export interface Experience {
   description: string;
   technologies: string[];
 }
+
+export interface AppState {
+  scrolled: boolean;
+  mobileMenuOpen: boolean;
+  currentSection: string;
+  formSubmitting: boolean;
+  formStatus: FormStatus | null;
+}
