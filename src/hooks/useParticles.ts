@@ -24,7 +24,7 @@ export const useParticles = () => {
               }
             },
             color: {
-              value: ["#7C3AED", "#A78BFA", "#D946EF"]
+              value: ["#7C3AED", "#A78BFA", "#D946EF", "#46ef9aff"]
             },
             shape: {
               type: "circle"

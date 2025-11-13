@@ -2,14 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Sora:wght@400;500;600;700&display=swap');
+
 :root {
   --violet-300: #A78BFA;
   --violet-600: #7C3AED;
   --violet-700: #6D28D9;
   --fuchsia-500: #D946EF;
-  --indigo-600: #4338CA;
-  --indigo-900: #312E81;
-  --cyan-400: #22D3EE;
   --bg-dark-1: #0F0B1E;
   --bg-dark-2: #110F1A;
   --bg-dark-3: #1F1A2E;
@@ -29,7 +28,7 @@ html {
 body {
   font-family: 'Inter', sans-serif;
   background-color: var(--bg-dark-1);
-  color: #fff;
+  color: #ffffff !important;
   overflow-x: hidden;
 }
 
@@ -37,147 +36,122 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Sora', sans-serif;
 }
 
-.bg-aurora {
-  background: linear-gradient(135deg, var(--indigo-900), var(--violet-600));
+/* ESTILOS ESPECÍFICOS PARA EL HEADER - FORZADOS */
+.nav-link {
+  position: relative;
+  color: #ffffff !important;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
 }
 
-.bg-hero {
-  background: radial-gradient(circle at 70% 30%, var(--fuchsia-500) 0%, var(--violet-700) 50%, var(--violet-300) 100%);
+.nav-link:hover {
+  color: #A78BFA !important;
 }
 
-.glow {
-  box-shadow: 0 0 25px 5px rgba(124, 58, 237, 0.5);
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #A78BFA;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: #7C3AED !important;
+  color: #ffffff !important;
+  padding: 0.5rem 1.25rem !important;
+  border-radius: 0.5rem !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  border: none !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+.btn:hover {
+  background-color: #6D28D9 !important;
+  color: #ffffff !important;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: all 0.6s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
 }
 
 .blur-bg {
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
 }
 
-/* Blob Animation for Avatar */
-@keyframes morphBlob {
-  0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-  25% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
-  50% { border-radius: 50% 60% 30% 40% / 40% 30% 70% 60%; }
-  75% { border-radius: 40% 60% 70% 30% / 60% 40% 30% 70%; }
-  100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+/* Reset de colores para elementos específicos */
+a {
+  color: inherit !important;
+  text-decoration: none !important;
 }
 
-.blob {
-  animation: morphBlob 15s ease-in-out infinite;
+button {
+  color: inherit !important;
 }
 
-/* Skill Bar Animation */
-.skill-bar {
-  width: 100%;
-  height: 10px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 5px;
-  overflow: hidden;
-  position: relative;
+/* Colores específicos para el logo */
+.text-\[\#A78BFA\] {
+  color: #A78BFA !important;
 }
 
-.skill-progress {
-  height: 100%;
-  border-radius: 5px;
-  background: linear-gradient(90deg, var(--violet-700), var(--fuchsia-500));
-  transform-origin: left;
-  transform: scaleX(0);
-  transition: transform 1.5s ease;
+.text-\[\#D946EF\] {
+  color: #D946EF !important;
 }
 
-/* Timeline */
-.timeline {
-  position: relative;
+/* Asegurar que Tailwind funcione */
+.container {
+  width: 100% !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
 }
 
-.timeline::before {
-  content: '';
-  position: absolute;
-  width: 2px;
-  height: 100%;
-  background: var(--violet-600);
-  left: 0;
-  transform: translateX(-50%);
-}
-
-.timeline-item {
-  position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: var(--fuchsia-500);
-  left: 0;
-  top: 0;
-  transform: translateX(-50%);
-}
-
-/* Project Cards */
-.project-card {
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  background-color: var(--bg-dark-3);
-  border: 1px solid rgba(124, 58, 237, 0.2);
-}
-
-.project-card:hover {
-  transform: translateY(-8px) perspective(1000px) rotateX(2deg) rotateY(2deg);
-  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
-}
-
-/* Input Focus States */
-.form-input:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px var(--cyan-400);
-  border-color: var(--violet-300);
-}
-
-/* Hide Canvas when reduced motion is preferred */
-@media (prefers-reduced-motion: reduce) {
-  #particles-js, #three-bg {
-    display: none !important;
-  }
-  
-  .blob {
-    animation: none;
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px !important;
   }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .timeline::before {
-    left: 1rem;
-  }
-  
-  .timeline-item {
-    padding-left: 2.5rem;
-  }
-  
-  .timeline-item::before {
-    left: 1rem;
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px !important;
   }
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px !important;
+  }
 }
 
-::-webkit-scrollbar-track {
-  background: var(--bg-dark-2);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--violet-600);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--violet-500);
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px !important;
+  }
 }

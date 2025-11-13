@@ -14,16 +14,7 @@ const sora = Sora({
 
 export const metadata: Metadata = {
   title: 'Portfolio - Desarrollador Frontend/Full-Stack',
-  description: 'Desarrollador Frontend/Full-Stack especializado en Vue, Tailwind, Three.js y AWS. Creando experiencias web modernas, rápidas y con carácter.',
-  openGraph: {
-    title: 'Portfolio - Desarrollador Frontend/Full-Stack',
-    description: 'Creando experiencias web moradas, rápidas y con carácter',
-    type: 'website',
-    images: ['https://cdn.pixabay.com/photo/2023/05/22/11/22/ai-generated-8010765_1280.jpg'],
-  },
-  twitter: {
-    card: 'summary_large_image',
-  },
+  description: 'Desarrollador Frontend/Full-Stack especializado en Vue, Tailwind, Three.js y AWS.',
 };
 
 export default function RootLayout({
@@ -33,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className={`${inter.variable} ${sora.variable}`}>
-      <body className={inter.className}>
+      <body className={`${inter.className} antialiased`}>
         {children}
       </body>
     </html>
