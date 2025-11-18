@@ -12,17 +12,17 @@ export default function Hero() {
         <div className="max-w-3xl">
           <p className="text-[#A78BFA] font-medium mb-4">Guadalajara, MX — UTC-6</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-sora mb-6 leading-tight">
-            Creo experiencias web <span className="text-[#D946EF]">moradas</span>, <span className="text-[#A78BFA]">rápidas</span> y con <span className="text-[#7C3AED]">carácter</span>.
+            I create <span className="text-[#D946EF]">purple</span>, <span className="text-[#A78BFA]">lightning-fast</span> web experiences with <span className="text-[#7C3AED]">character</span>.
           </h1>
           <p className="text-lg md:text-xl text-gray-300 mb-8">
-            Frontend/Full-Stack | Vue · Tailwind · Three.js · AWS
+            Frontend/ Backend /Full-Stack | Vue · Tailwind · Three.js · AWS · React
           </p>
           <div className="flex flex-wrap gap-4">
             <a href="#contact" className="btn px-6 py-3 bg-[#7C3AED] hover:bg-[#6D28D9] rounded-lg text-white font-medium transition-all relative overflow-hidden">
-              Escríbeme
+              Contact me
             </a>
             <a href="#projects" className="btn px-6 py-3 bg-transparent border-2 border-[#7C3AED] hover:border-[#A78BFA] rounded-lg text-white font-medium transition-all relative overflow-hidden">
-              Explorar proyectos
+              Explore projects
             </a>
           </div>
         </div>

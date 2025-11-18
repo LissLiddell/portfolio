@@ -17,29 +17,29 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold font-sora mb-6">
-              Acerca de <span className="text-[#D946EF]">Mí</span>
+              About <span className="text-[#D946EF]">Me</span>
             </h2>
             <p className="text-lg text-gray-300 mb-6">
-              Soy un <span className="text-[#A78BFA] font-medium">Desarrollador Full-Stack</span> apasionado por crear 
-              experiencias digitales excepcionales.
+              I am <span className="text-[#A78BFA] font-medium">Versatile professional </span> with comprehensive experience across the software development lifecycle—from 
+              requirement analysis and design to implementation and optimization. Strong technical background in cloud 
+              environments (AWS), languages such as Python, JavaScript/TypeScript, and C#, and modern frameworks like Vue3 
+              and React. Deep understanding of business processes in areas like Collections, Credit, and Sales, gained through 
+              previous roles as an Analyst and Key User. Seeking to contribute to challenging projects where I can apply my 
+              technical and analytical skills to drive impact.
             </p>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-[#D946EF] mb-2 counter" data-target="50">0</div>
-                <div className="text-sm text-gray-400">Proyectos</div>
+                <div className="text-2xl md:text-3xl font-bold text-[#D946EF] mb-2 counter" data-target="4">0</div>
+                <div className="text-sm text-gray-400">Projects</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-[#D946EF] mb-2 counter" data-target="3">0</div>
-                <div className="text-sm text-gray-400">Años Exp.</div>
+                <div className="text-2xl md:text-3xl font-bold text-[#D946EF] mb-2 counter" data-target="2">0</div>
+                <div className="text-sm text-gray-400">Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-[#D946EF] mb-2 counter" data-target="25">0</div>
-                <div className="text-sm text-gray-400">Clientes</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-[#D946EF] mb-2 counter" data-target="15">0</div>
-                <div className="text-sm text-gray-400">Tecnologías</div>
+                <div className="text-2xl md:text-3xl font-bold text-[#D946EF] mb-2 counter" data-target="30">0</div>
+                <div className="text-sm text-gray-400">Technologies</div>
               </div>
             </div>
           </div>
@@ -72,7 +72,7 @@ export default function About() {
             </div>
             <h3 className="text-lg font-sora font-semibold mb-3">Frontend</h3>
             <p className="text-gray-300 text-sm">
-              Interfaces modernas con Vue, React, TypeScript y Tailwind CSS
+              ⚙️ Developing modern front-end interfaces powered by Vue, React, TypeScript, and Tailwind CSS.
             </p>
           </div>
           
@@ -84,7 +84,7 @@ export default function About() {
             </div>
             <h3 className="text-xl font-sora font-semibold mb-3">Backend</h3>
             <p className="text-gray-300 text-sm">
-              APIs robustas con Node.js, bases de datos y cloud
+              💼 Building robust APIs using Node.js, databases, and cloud technologies.
             </p>
           </div>
           
@@ -96,7 +96,7 @@ export default function About() {
             </div>
             <h3 className="text-xl font-sora font-semibold mb-3">Performance</h3>
             <p className="text-gray-300 text-sm">
-              Optimización, SEO y mejores prácticas
+              Optimization, SEO, and best practices.
             </p>
           </div>
         </div>

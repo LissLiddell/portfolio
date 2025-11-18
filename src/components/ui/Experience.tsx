@@ -3,27 +3,60 @@
 const experiences = [
   {
     id: 1,
-    company: "Tech Startup",
-    position: "Senior Frontend Developer",
-    period: "2022 - Presente",
-    description: "Lideré el desarrollo de aplicaciones web modernas utilizando Vue.js y React. Implementé arquitecturas escalables y mejoré el performance en un 40%.",
-    technologies: ["Vue.js", "TypeScript", "Tailwind", "AWS", "Three.js"]
+    company: "Mavi de Occcidente S.A de C.V",
+    position: "Full Stack Developer",
+    period: "04/07/2024 - Presente",
+    description: [
+      "Developed and maintained web applications using Vue3, TypeScript, TailwindCSS, PrimeVue, React, Vite",
+      "Built and consumed Python APIs deployed on AWS for system integration",
+      "Managed containers using Docker and established connections to SAP HANA Cloud databases",
+      "Implemented security modules, configured roles and profiles, and developed CRUD operations for various departments (Credit, Collections, RH)",
+      "Reduced AWS and HANA Cloud costs by optimizing repositories, merging requests, and generalizing queries to minimize resource consumption",
+      "Developed C# projects for integration with bank terminals and payment ticket generation",
+      "Implemented geospatial proximity analysis for credit evaluation."
+    ],
+    technologies: ["Vue.js", "PrimeVue", "Tailwind", "AWS", "PrimeFlex", "BAPI/CPI SAP", "Python", "JS"]
   },
   {
     id: 2,
-    company: "Agencia Digital",
-    position: "Full-Stack Developer",
-    period: "2021 - 2022",
-    description: "Desarrollé soluciones web completas para diversos clientes, desde landing pages hasta aplicaciones empresariales complejas.",
-    technologies: ["React", "Node.js", "MongoDB", "Express", "Socket.io"]
+    company: "Mavi de Occcidente S.A de C.V",
+    position: "Software Analyst / Key User",
+    period: "14/02/2022 - 03/07/2024",
+    description: [
+      "Served as the primary liaison between development teams and the specialized Collections department.",
+      "Designed and authored technical and functional documentation for new tools and features.",
+      "Led and orchestrated refinement and analysis meetings to define requirements and plan sprints using Agile (Scrum) methodologies.",
+      "Validated tool functionality in production environments and addressed incidents.",
+      "Successfully designed and validated the Legal HR Management module and the Collections tool.",
+    ],
+    technologies: [""]
   },
   {
     id: 3,
-    company: "Freelance",
+    company: "Just Creative S.A de C.V",
     position: "Web Developer",
-    period: "2020 - 2021",
-    description: "Trabajé con startups y pequeñas empresas creando sus primeras versiones web y estableciendo sus presencia digital.",
-    technologies: ["JavaScript", "CSS3", "HTML5", "WordPress", "PHP"]
+    period: "05/05/2017 - 16/01/2018",
+    description: [
+      "Programmed and managed websites and online radios using PHP 5, JavaScript, AJAX, and MySQL.",
+      "Administered databases via phpMyAdmin.",
+      "Developed user interfaces with HTML5, Bootstrap and CSS.",
+      "Maintained and updated client portfolio websites, implementing new features and functionality.",
+      "Developed and programmed digital radio streaming platforms with custom features."
+    ],
+    technologies: ["JavaScript", "CSS3", "HTML5", "Ajax", "PHP", "JQuery"], 
+  },
+   {
+    id: 4,
+    company: "Mavi de Occcidente S.A de C.V",
+    position: "Intelisis Developer",
+    period: "15/07/2016 - 31/01/2017",
+    description: [
+      "Developed custom reports, views, and forms for the Intelisis ERP.",
+      "Programmed SQL Stored Procedures and MySQL queries to connect and extend ERP functionality.",
+      "Conducted comprehensive flow testing to ensure seamless integrations without impacting production environments.",
+      "Created external plugins to enhance ERP connectivity and expand system capabilities."
+    ],
+    technologies: ["MySQL", "Stored Procedures", "Intelisis ERP"]
   }
 ];
 
@@ -32,25 +65,30 @@ export default function Experience() {
     <section id="experience" className="py-20 relative z-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl font-bold font-sora mb-12 text-center">
-          Mi <span className="text-[#D946EF]">Experiencia</span>
+          My <span className="text-[#D946EF]">Experience</span>
         </h2>
         
         <div className="max-w-4xl mx-auto">
           <div className="timeline">
-            {experiences.map((exp, index) => (
+            {experiences.map((exp) => (
               <div key={exp.id} className="timeline-item">
                 <div className="bg-[#1F1A2E] p-6 rounded-lg border border-[#7C3AED]/20 hover:border-[#A78BFA]/40 transition-all duration-300">
                   <div className="flex flex-wrap justify-between items-start mb-3">
-                    <h3 className="text-xl font-sora font-semibold text-white">{exp.position}</h3>
+                    <h3 className="text-xl font-sora font-semibold text-white mb-4">{exp.position}</h3>
                     <span className="text-[#D946EF] font-medium bg-[#D946EF]/10 px-3 py-1 rounded-full text-sm">
                       {exp.period}
                     </span>
                   </div>
-                  <h4 className="text-[#A78BFA] font-medium mb-4">{exp.company}</h4>
-                  <p className="text-gray-300 mb-4 leading-relaxed">
-                    {exp.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
+                  <h4 className="text-[#A78BFA] font-medium mb-6">{exp.company}</h4>
+                  <ul className="space-y-3 mb-4">
+                    {exp.description.map((item, index) => (
+                      <li key={index} className="flex items-start gap-2 text-gray-300">
+                        <span className="text-[#D946EF] mt-1">✔</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="flex flex-wrap gap-2 mt-8">
                     {exp.technologies.map((tech, techIndex) => (
                       <span 
                         key={techIndex}

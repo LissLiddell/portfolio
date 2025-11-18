@@ -59,15 +59,15 @@ export default function Contact() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold font-sora mb-8 text-center">
-            Trabajemos <span className="text-[#D946EF]">juntos</span>
+            Let's work <span className="text-[#D946EF]">together</span>
           </h2>
           
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-xl font-sora font-semibold mb-6">Hablemos de tu proyecto</h3>
+              <h3 className="text-xl font-sora font-semibold mb-6">Let’s talk about your project</h3>
               <p className="text-gray-300 mb-6">
-                ¿Tienes una idea en mente? Me encanta colaborar en proyectos desafiantes 
-                y crear experiencias digitales excepcionales.
+                Do you have an idea in mind? I love collaborating on challenging projects 
+                and creating exceptional digital experiences.
               </p>
               
               <div className="space-y-4">
@@ -77,7 +77,7 @@ export default function Contact() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
-                  <span className="text-gray-300">email@ejemplo.com</span>
+                  <span className="text-gray-300">lissetchopper@gmail.com</span>
                 </div>
                 
                 <div className="flex items-center space-x-3">
@@ -97,7 +97,7 @@ export default function Contact() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                      Nombre *
+                      Name *
                     </label>
                     <input
                       type="text"
@@ -107,7 +107,7 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-[#1F1A2E] border border-gray-700 rounded-lg form-input text-white placeholder-gray-500 focus:outline-none focus:border-[#A78BFA] focus:ring-2 focus:ring-[#22D3EE] transition-colors"
-                      placeholder="Tu nombre"
+                      placeholder="You name"
                     />
                   </div>
                   
@@ -123,14 +123,14 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-[#1F1A2E] border border-gray-700 rounded-lg form-input text-white placeholder-gray-500 focus:outline-none focus:border-[#A78BFA] focus:ring-2 focus:ring-[#22D3EE] transition-colors"
-                      placeholder="tu@email.com"
+                      placeholder="your@email.com"
                     />
                   </div>
                 </div>
                 
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
-                    Asunto *
+                    Subject *
                   </label>
                   <input
                     type="text"
@@ -140,13 +140,13 @@ export default function Contact() {
                     value={formData.subject}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 bg-[#1F1A2E] border border-gray-700 rounded-lg form-input text-white placeholder-gray-500 focus:outline-none focus:border-[#A78BFA] focus:ring-2 focus:ring-[#22D3EE] transition-colors"
-                    placeholder="¿En qué puedo ayudarte?"
+                    placeholder="¿How can I help you?"
                   />
                 </div>
                 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                    Mensaje *
+                    Message *
                   </label>
                   <textarea
                     id="message"
@@ -156,7 +156,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 bg-[#1F1A2E] border border-gray-700 rounded-lg form-input text-white placeholder-gray-500 focus:outline-none focus:border-[#A78BFA] focus:ring-2 focus:ring-[#22D3EE] transition-colors resize-none"
-                    placeholder="Cuéntame más sobre tu proyecto..."
+                    placeholder="Tell me more about your project..."
                   />
                 </div>
                 
@@ -171,7 +171,7 @@ export default function Contact() {
                     className="w-4 h-4 text-[#7C3AED] bg-gray-700 border-gray-600 rounded focus:ring-[#7C3AED] focus:ring-2"
                   />
                   <label htmlFor="consent" className="ml-2 text-sm text-gray-300">
-                    Acepto que mis datos sean procesados para responder a mi consulta
+                    I consent to my data being processed in order to receive a response to my inquiry.
                   </label>
                 </div>
                 
@@ -180,7 +180,7 @@ export default function Contact() {
                   disabled={formSubmitting}
                   className="w-full btn px-6 py-3 bg-[#7C3AED] hover:bg-[#6D28D9] disabled:bg-gray-600 rounded-lg text-white font-medium transition-all relative overflow-hidden"
                 >
-                  {formSubmitting ? 'Enviando...' : 'Enviar mensaje'}
+                  {formSubmitting ? 'Sending...' : 'Send message'}
                 </button>
                 
                 {formStatus && (

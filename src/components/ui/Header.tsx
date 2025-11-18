@@ -4,10 +4,10 @@ import { useScroll } from '../../hooks/useScroll';
 import { NavItem } from '../../types';
 
 const navItems: NavItem[] = [
-  { href: '#about', label: 'Acerca de' },
-  { href: '#experience', label: 'Experiencia' },
+  { href: '#about', label: 'About' },
+  { href: '#experience', label: 'Experience' },
   { href: '#skills', label: 'Skills' },
-  { href: '#projects', label: 'Proyectos' },
+  { href: '#projects', label: 'Projects' },
 ];
 
 export default function Header() {
@@ -35,8 +35,8 @@ export default function Header() {
             style={{ color: 'white' }}
           >
             <span style={{ color: '#A78BFA' }}>{'{'}</span>
-            <span style={{ color: 'white' }}>Dev</span>
-            <span style={{ color: '#D946EF' }}>Portfolio</span>
+            <span style={{ color: 'white' }}>Lisset</span>
+            <span style={{ color: '#D946EF' }}>López</span>
             <span style={{ color: '#A78BFA' }}>{'}'}</span>
           </a>
           
@@ -65,7 +65,7 @@ export default function Header() {
                 fontWeight: '500'
               }}
             >
-              Contactar
+              Contact
             </a>
           </div>
           

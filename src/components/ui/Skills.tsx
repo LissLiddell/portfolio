@@ -21,19 +21,44 @@ ChartJS.register(
   Legend
 );
 
-const skillsData = [
-  { name: 'Vue.js', level: 95 },
-  { name: 'React/Next.js', level: 90 },
-  { name: 'TypeScript', level: 88 },
-  { name: 'Tailwind CSS', level: 92 },
-  { name: 'Three.js', level: 85 },
-  { name: 'Node.js', level: 82 },
-  { name: 'AWS', level: 78 },
-  { name: 'UI/UX Design', level: 90 },
-];
+
+    const skillsData = [
+    { name: "Vue.js / Next.js", level: 85 },
+    { name: "UI/UX", level: 70 },
+    { name: "TypeScript", level: 70 },
+    { name: "Tailwind CSS", level: 50 },
+    { name: "React", level: 60 },
+    { name: "PrimeVue", level: 80 },
+    { name: "Entity Framework", level: 50 },
+    { name: "LuigiClient", level: 60 },
+    { name: "Python", level: 50 },
+    { name: "TypeScript", level: 50 },
+    { name: "JavaScript", level: 80 },
+    { name: "C#", level: 60 },
+    { name: "PHP", level: 50 },
+    { name: "HTML5", level: 60 },
+    { name: "Tailwind CSS", level: 80 },
+    { name: "PrimeFlex", level: 80 },
+    { name: "AWS (APIs, Luigi),", level: 80 },
+    { name: "Docker", level: 50 },
+    { name: "MySQL", level: 80 },
+    { name: "SAP HANA Cloud", level: 30 },
+    { name: "Intelisis", level: 70 },
+    { name: "SAP BAPI/CPI", level: 60 },
+    { name: "JWT Authentication", level: 80 },
+    { name: "Scrum", level: 90 },
+    { name: "Requirements Analysis", level: 95 },
+    { name: "Technical/Functional Documentation", level: 95 },
+    { name: "Collections", level: 80 },
+    { name: "Credit", level: 50 },
+    { name: "HR", level: 50 },
+    { name: "Sales", level: 70 },
+    { name: "Legal HR Management", level: 80 },
+  ];
+
 
 const chartData = {
-  labels: ['Frontend', 'UI/UX', 'Backend', '3D/Animation', 'DevOps', 'Arquitectura'],
+  labels: ['Frontend', 'UI/UX', 'Backend', '3D/Animation', 'Arquitectura'],
   datasets: [{
     label: 'Competencias',
     data: [95, 90, 82, 85, 78, 88],

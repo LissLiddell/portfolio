@@ -3,54 +3,39 @@
 const projects = [
   {
     id: 1,
-    title: "E-commerce Platform",
-    description: "Plataforma de e-commerce moderna con carrito de compras, pasarela de pagos y panel administrativo.",
-    technologies: ["Vue 3", "TypeScript", "Node.js", "MongoDB", "AWS"],
+    title: "Trading Analysis Tool",
+    description: "Developed an automated financial analysis tool using Python for market data processing and trend identification,Implemented data visualization for trading decisions and portfolio performance tracking.",
+    technologies: ["Python", "Automated Scheduling"],
     image: "/api/placeholder/600/400",
     liveUrl: "#",
     githubUrl: "#"
   },
-  {
+    {
     id: 2,
-    title: "Dashboard Analytics",
-    description: "Dashboard interactivo para visualización de datos con gráficos en tiempo real y reportes automáticos.",
-    technologies: ["React", "D3.js", "Express", "PostgreSQL", "Docker"],
+    title: "Point of Sale (POS) System",
+    description:
+      "Full POS solution including cash drawer management, product catalog, user permissions, and real-time transaction tracking. Features a responsive dashboard, automated reports, authentication with JWT, and modular architecture.",
+    technologies: ["React", "TailwindCSS", "Next.js", "Node.js"],
     image: "/api/placeholder/600/400",
     liveUrl: "#",
     githubUrl: "#"
   },
   {
     id: 3,
-    title: "Portfolio 3D",
-    description: "Portfolio interactivo con experiencias 3D, animaciones WebGL y efectos de partículas.",
-    technologies: ["Three.js", "React", "Framer Motion", "Tailwind", "Vite"],
+    title: "Hotmart Affiliate Catalog Website",
+    description:
+      "Responsive website designed to showcase and highlight Hotmart affiliate products. Includes dynamic product cards, category filtering, SEO-optimized pages, and direct CTA redirections to Hotmart for conversion. Built to work as a clean, fast product showcase for affiliate marketing.",
+    technologies: ["React", "Framer Motion", "Tailwind", "Vite"],
     image: "/api/placeholder/600/400",
     liveUrl: "#",
     githubUrl: "#"
   },
   {
     id: 4,
-    title: "App de Tareas",
-    description: "Aplicación de productividad con sincronización en tiempo real y múltiples vistas.",
-    technologies: ["Next.js", "Socket.io", "Prisma", "Redis", "Vercel"],
-    image: "/api/placeholder/600/400",
-    liveUrl: "#",
-    githubUrl: "#"
-  },
-  {
-    id: 5,
-    title: "API REST",
-    description: "API escalable con autenticación JWT, documentación Swagger y sistema de caché.",
-    technologies: ["Node.js", "Express", "JWT", "Redis", "Swagger"],
-    image: "/api/placeholder/600/400",
-    liveUrl: "#",
-    githubUrl: "#"
-  },
-  {
-    id: 6,
-    title: "Landing Page",
-    description: "Landing page optimizada para conversión con animaciones CSS y SEO avanzado.",
-    technologies: ["HTML5", "CSS3", "JavaScript", "GSAP", "Netlify"],
+    title: "Security Module & Authentication System",
+    description:
+      "Reusable security module featuring user authentication, role-based access control (RBAC), permission management, and protected routes. Includes login, session validation, access restrictions to tools/modules, and scalable architecture designed to integrate easily into any SaaS or enterprise application.",
+    technologies: ["Next.js", "Node.js", "Prisma", "JWT", "Redis"],
     image: "/api/placeholder/600/400",
     liveUrl: "#",
     githubUrl: "#"
@@ -109,13 +94,13 @@ export default function Projects() {
                     href={project.liveUrl}
                     className="flex-1 text-center px-4 py-2 bg-[#7C3AED] hover:bg-[#6D28D9] text-white rounded-lg text-sm font-medium transition-colors"
                   >
-                    Ver Demo
+                    Demo
                   </a>
                   <a 
                     href={project.githubUrl}
                     className="flex-1 text-center px-4 py-2 bg-transparent border border-[#7C3AED] hover:border-[#A78BFA] text-white rounded-lg text-sm font-medium transition-colors"
                   >
-                    Código
+                    Code
                   </a>
                 </div>
               </div>
@@ -128,7 +113,7 @@ export default function Projects() {
             href="#contact"
             className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-[#7C3AED] to-[#D946EF] hover:from-[#6D28D9] hover:to-[#C026D3] text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
           >
-            <span>¿Tienes un proyecto en mente?</span>
+            <span>Have a project in mind? Let’s build it.</span>
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
