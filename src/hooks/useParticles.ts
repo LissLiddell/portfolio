@@ -17,20 +17,20 @@ export const useParticles = () => {
           fpsLimit: 60,
           particles: {
             number: {
-              value: 80,
+              value: 250,
               density: {
                 enable: true,
                 value_area: 800
               }
             },
             color: {
-              value: ["#7C3AED", "#A78BFA", "#D946EF", "#46ef9aff"]
+              value: ["#7C3AED", "#edecf0ff", "#D946EF", "#62e0a1ff"]
             },
             shape: {
-              type: "circle"
+              type: ["circle", "star"]
             },
             opacity: {
-              value: 0.5,
+              value: 0.7,
               random: true
             },
             size: {
@@ -50,10 +50,10 @@ export const useParticles = () => {
           interactivity: {
             detect_on: "canvas",
             events: {
-              onhover: {
-                enable: true,
-                mode: "grab"
-              },
+              // onhover: {
+              //   enable: true,
+              //   mode: "grab"
+              // },
               onclick: {
                 enable: false
               },

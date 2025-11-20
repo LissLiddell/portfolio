@@ -25,7 +25,7 @@ export default function ThreeBackground() {
       color: 0x7C3AED,
       wireframe: true,
       transparent: true,
-      opacity: 0.3
+      opacity: 0.5
     });
     
     const mesh = new THREE.Mesh(geometry, material);

@@ -109,9 +109,9 @@ export default function Experience() {
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
-            <span className="font-medium">¿Interesado en trabajar juntos?</span>
+            <span className="font-medium">Ready to build something together?</span>
             <a href="#contact" className="text-[#D946EF] hover:text-[#A78BFA] transition-colors font-semibold">
-              Hablemos →
+              Let's talk →
             </a>
           </div>
         </div>

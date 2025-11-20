@@ -10,13 +10,13 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="text-2xl font-bold text-white font-sora mb-4">
               <span className="text-[#A78BFA]">{'{'}</span>
-              <span>Dev</span>
-              <span className="text-[#D946EF]">Portfolio</span>
+              <span>Lisset</span>
+              <span className="text-[#D946EF]">López</span>
               <span className="text-[#A78BFA]">{'}'}</span>
             </div>
             <p className="text-gray-400 mb-6 max-w-md text-sm">
-              Desarrollador Full-Stack especializado en crear experiencias web modernas, 
-              rápidas y con carácter. Transformando ideas en realidad digital.
+              Full-Stack Developer specialized in building modern, high-performance web experiences with personality. 
+              Bringing ideas to life in the digital world.
             </p>
             <div className="flex space-x-3">
               <a 
@@ -59,16 +59,16 @@ export default function Footer() {
           </div>
           
           <div>
-            <h3 className="text-lg font-sora font-semibold text-white mb-4">Enlaces Rápidos</h3>
+            <h3 className="text-lg font-sora font-semibold text-white mb-4">⭐ Quick Links</h3>
             <ul className="space-y-2">
               <li>
                 <a href="#about" className="text-gray-400 hover:text-[#A78BFA] transition-colors text-sm">
-                  Acerca de
+                  About
                 </a>
               </li>
               <li>
                 <a href="#experience" className="text-gray-400 hover:text-[#A78BFA] transition-colors text-sm">
-                  Experiencia
+                  Experience
                 </a>
               </li>
               <li>
@@ -78,19 +78,19 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#projects" className="text-gray-400 hover:text-[#A78BFA] transition-colors text-sm">
-                  Proyectos
+                  Projects
                 </a>
               </li>
               <li>
                 <a href="#contact" className="text-gray-400 hover:text-[#A78BFA] transition-colors text-sm">
-                  Contacto
+                  Contact
                 </a>
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-lg font-sora font-semibold text-white mb-4">Tecnologías</h3>
+            <h3 className="text-lg font-sora font-semibold text-white mb-4">Tecnologies</h3>
             <ul className="space-y-2">
               <li><span className="text-gray-400 text-sm">Vue.js & React</span></li>
               <li><span className="text-gray-400 text-sm">TypeScript</span></li>
@@ -104,10 +104,10 @@ export default function Footer() {
         
         <div className="border-t border-[#7C3AED]/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © {currentYear} DevPortfolio. Todos los derechos reservados.
+            © {currentYear} DevPortfolio. All rights reserved.
           </p>
           <p className="text-gray-400 text-sm mt-2 md:mt-0">
-            Hecho con <span className="text-[#D946EF]">♥</span> y mucho código
+            Built with <span className="text-[#D946EF]">♥</span> and clean code
           </p>
         </div>
       </div>
