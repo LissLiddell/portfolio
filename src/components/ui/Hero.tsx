@@ -15,7 +15,7 @@ export default function Hero() {
             I create <span className="text-[#D946EF]">purple</span>, <span className="text-[#A78BFA]">lightning-fast</span> web experiences with <span className="text-[#7C3AED]">character</span>.
           </h1>
           <p className="text-lg md:text-xl text-gray-300 mb-8">
-            Frontend/ Backend /Full-Stack | Vue · Tailwind · Three.js · AWS · React
+            Frontend / Backend / Full-Stack | Vue · Tailwind · Three.js · AWS · React
           </p>
           <div className="flex flex-wrap gap-4">
             <a href="#contact" className="btn px-6 py-3 bg-[#7C3AED] hover:bg-[#6D28D9] rounded-lg text-white font-medium transition-all relative overflow-hidden">

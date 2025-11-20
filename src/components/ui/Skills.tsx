@@ -113,7 +113,7 @@ export default function Skills() {
     <section id="skills" className="py-20 relative z-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl font-bold font-sora mb-12 text-center">
-          Mis <span className="text-[#D946EF]">Skills</span>
+          My <span className="text-[#D946EF]">Skills</span>
         </h2>
         
         <div className="grid lg:grid-cols-2 gap-12 items-center">

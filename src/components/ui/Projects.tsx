@@ -47,13 +47,13 @@ export default function Projects() {
     <section id="projects" className="py-20 relative z-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl font-bold font-sora mb-4 text-center">
-          Mis <span className="text-[#D946EF]">Proyectos</span>
+          My <span className="text-[#D946EF]">Projects</span>
         </h2>
         <p className="text-lg text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-          Una selección de proyectos donde he aplicado mis habilidades en desarrollo web moderno
+          A selection of projects where I bring modern web development ideas to life.
         </p>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-6 lg:grid-cols-2 gap-6">
           {projects.map((project) => (
             <div 
               key={project.id}

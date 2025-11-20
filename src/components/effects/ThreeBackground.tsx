@@ -20,12 +20,13 @@ export default function ThreeBackground() {
     renderer.setSize(container.clientWidth, container.clientHeight);
     container.appendChild(renderer.domElement);
     
-    const geometry = new THREE.PlaneGeometry(20, 20, 20, 20);
+    const geometry = new THREE.TorusGeometry(9, 3, 25, 80);
     const material = new THREE.MeshBasicMaterial({
-      color: 0x7C3AED,
+       color: 0xD946EF,
       wireframe: true,
       transparent: true,
-      opacity: 0.5
+      opacity: 0.35,
+      blending: THREE.AdditiveBlending
     });
     
     const mesh = new THREE.Mesh(geometry, material);
@@ -47,6 +48,7 @@ export default function ThreeBackground() {
       if (!document.hidden && mesh) {
         mesh.rotation.x += 0.003;
         mesh.rotation.y += 0.002;
+        camera.position.z = 10 + Math.sin(Date.now() * 0.0005) * 1.5;
         renderer.render(scene, camera);
       }
     };

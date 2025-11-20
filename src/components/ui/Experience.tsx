@@ -71,16 +71,16 @@ export default function Experience() {
         <div className="max-w-4xl mx-auto">
           <div className="timeline">
             {experiences.map((exp) => (
-              <div key={exp.id} className="timeline-item">
+              <div key={exp.id} className="timeline-item mb-6">
                 <div className="bg-[#1F1A2E] p-6 rounded-lg border border-[#7C3AED]/20 hover:border-[#A78BFA]/40 transition-all duration-300">
-                  <div className="flex flex-wrap justify-between items-start mb-3">
-                    <h3 className="text-xl font-sora font-semibold text-white mb-4">{exp.position}</h3>
+                  <div className="flex flex-wrap justify-between items-start mb-5">
+                    <h3 className="text-xl font-sora font-semibold text-white mb-6">{exp.position}</h3>
                     <span className="text-[#D946EF] font-medium bg-[#D946EF]/10 px-3 py-1 rounded-full text-sm">
                       {exp.period}
                     </span>
                   </div>
-                  <h4 className="text-[#A78BFA] font-medium mb-6">{exp.company}</h4>
-                  <ul className="space-y-3 mb-4">
+                  <h4 className="text-[#A78BFA] font-medium mb-8">{exp.company}</h4>
+                  <ul className="space-y-3 pb-6">
                     {exp.description.map((item, index) => (
                       <li key={index} className="flex items-start gap-2 text-gray-300">
                         <span className="text-[#D946EF] mt-1">✔</span>
